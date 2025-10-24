@@ -94,3 +94,7 @@ The app is designed specifically for mobile devices with:
 - Touch-friendly interface
 - Responsive card layouts
 - Mobile-optimized typography and spacing
+
+## Deployed url
+
+- https://test-wallet-bz97.vercel.app/
