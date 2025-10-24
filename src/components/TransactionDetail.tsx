@@ -26,14 +26,15 @@ const TransactionDetail: React.FC<TransactionDetailProps> = ({ transaction, onBa
   const formatTime = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleTimeString('en-US', {
-      hour: 'numeric',
+      hour: '2-digit',
       minute: '2-digit',
-      hour12: true
+      hour12: false
     });
   };
 
+
   return (
-    <div className="transaction-detail">
+    <div className="transaction-detail app">
       <button className="back-button" onClick={onBack}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>

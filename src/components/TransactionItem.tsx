@@ -62,15 +62,18 @@ const TransactionItem: React.FC<TransactionItemProps> = ({ transaction, onClick 
         <div className="transaction-date">{formatTransactionDate(transaction.date)}</div>
       </div>
       <div className="transaction-amount-section">
-        <div className={`transaction-amount ${transaction.type.toLowerCase()}`}>
-          {formatAmount(transaction.amount, transaction.type)}
+        <div className='transaction-amount-cont'>
+          <div className={`transaction-amount ${transaction.type.toLowerCase()}`}>
+            {formatAmount(transaction.amount, transaction.type)}
+          </div>
+          <div className="transaction-arrow">
+            <FontAwesomeIcon icon={faChevronRight} />
+          </div>
         </div>
         {transaction.cashbackPercentage > 0 && (
           <div className="transaction-cashback">{transaction.cashbackPercentage}%</div>
         )}
-        <div className="transaction-arrow">
-          <FontAwesomeIcon icon={faChevronRight} />
-        </div>
+        <div></div>
       </div>
     </div>
   );
