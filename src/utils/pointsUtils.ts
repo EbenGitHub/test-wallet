@@ -2,7 +2,6 @@ type Season = "spring" | "summer" | "autumn" | "winter";
 
 export const getCurrentSeason = (date: Date): Season => {
   const month = date.getMonth() + 1; // getMonth() returns 0-11
-  const day = date.getDate();
 
   // Spring: March 1 - May 31
   if (month === 3 || month === 4 || month === 5) return "spring";

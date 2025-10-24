@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
-import TransactionsList from './components/TransactionsList';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, useLocation, useNavigate } from 'react-router-dom';
 import TransactionDetail from './components/TransactionDetail';
-import type { WalletData, Transaction } from './types/wallet';
+import TransactionsList from './components/TransactionsList';
 import walletData from './data/walletData.json';
+import type { Transaction, WalletData } from './types/wallet';
 
 const AppContent: React.FC = () => {
-  const [data, setData] = useState<WalletData>(walletData as WalletData);
-  const [selectedTransaction, setSelectedTransaction] = useState<Transaction | null>(null);
+  const [data] = useState<WalletData>(walletData as WalletData);
+  const [_, setSelectedTransaction] = useState<Transaction | null>(null);
   const navigate = useNavigate();
   const location = useLocation();
 
